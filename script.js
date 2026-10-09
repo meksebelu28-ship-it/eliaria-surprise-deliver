@@ -917,3 +917,74 @@ updateCartCount();
 renderCart();
 
 setupProductsPage();
+
+
+const AI_API_URL =
+  "https://eliaria-surprise-deliver-production-514b.up.railway.app/api/chat";
+
+const aiButton = document.getElementById("aiButton");
+const aiChat = document.getElementById("aiChat");
+const aiClose = document.getElementById("aiClose");
+const aiForm = document.getElementById("aiForm");
+const aiInput = document.getElementById("aiInput");
+const aiMessages = document.getElementById("aiMessages");
+
+function toggleAI() {
+  aiChat.classList.toggle("open");
+
+  if (aiChat.classList.contains("open")) {
+    aiInput.focus();
+  }
+}
+
+aiButton.addEventListener("click", toggleAI);
+aiClose.addEventListener("click", toggleAI);
+
+aiForm.addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  const message = aiInput.value.trim();
+  if (!message) return;
+
+  addMessage("You: " + message);
+  aiInput.value = "";
+
+  const loading = addMessage("Elaria AI is thinking...");
+  const sendButton = aiForm.querySelector("button");
+  sendButton.disabled = true;
+
+  try {
+    const response = await fetch(AI_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ message })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "AI request failed.");
+    }
+
+    loading.textContent = "✨ Elaria AI: " + data.reply;
+
+  } catch (error) {
+    loading.textContent =
+      "Sorry, I couldn't connect to the AI. Please try again.";
+    console.error("Elaria AI error:", error);
+
+  } finally {
+    sendButton.disabled = false;
+    aiMessages.scrollTop = aiMessages.scrollHeight;
+  }
+});
+
+function addMessage(text) {
+  const messageElement = document.createElement("p");
+  messageElement.textContent = text;
+  aiMessages.appendChild(messageElement);
+  aiMessages.scrollTop = aiMessages.scrollHeight;
+  return messageElement;
+}
