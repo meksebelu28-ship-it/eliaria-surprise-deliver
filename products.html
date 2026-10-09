@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Products | Eliaria Surprise Deliver
+  </title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+
+  <a
+    class="brand"
+    href="index.html"
+  >
+
+    <span class="brand-gift">
+      🎁
+    </span>
+
+    <span>
+
+      <strong>
+        Eliaria
+      </strong>
+
+      <small>
+        Surprise Deliver
+      </small>
+
+    </span>
+
+  </a>
+
+
+
+  <nav class="main-nav">
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a
+      class="active"
+      href="products.html"
+    >
+      Product
+    </a>
+
+    <a href="about.html">
+      About Us
+    </a>
+
+  </nav>
+
+
+
+  <div class="header-actions">
+
+    <button
+      class="icon-btn"
+      id="searchToggle"
+    >
+      ⌕
+    </button>
+
+    <button
+      class="cart-btn"
+      id="cartOpen"
+    >
+      🛒
+      <span id="cartCount">
+        0
+      </span>
+    </button>
+
+    <button
+      class="menu-btn"
+      id="menuToggle"
+    >
+      ☰
+    </button>
+
+  </div>
+
+
+</header>
+
+
+
+<div
+  class="search-panel"
+  id="searchPanel"
+>
+
+  <input
+    id="globalSearch"
+    type="search"
+    placeholder="Search products..."
+  >
+
+</div>
+
+
+
+<main>
+
+
+<section class="page-hero product-hero">
+
+  <div>
+
+    <h1>
+      Our Products
+    </h1>
+
+    <p>
+      Quality products, fresh items and special gifts
+      <br>
+      for your loved ones in Eritrea.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<section class="products-section">
+
+
+  <!-- FILTERS -->
+
+  <div
+    class="filter-row"
+    id="filters"
+  >
+
+    <button
+      class="filter active"
+      data-category="all"
+    >
+      All
+    </button>
+
+
+    <button
+      class="filter"
+      data-category="food"
+    >
+      Food & Fresh
+    </button>
+
+
+    <button
+      class="filter"
+      data-category="meat"
+    >
+      Meat & Lamb
+    </button>
+
+
+    <button
+      class="filter"
+      data-category="dairy"
+    >
+      Dairy & Eggs
+    </button>
+
+
+    <button
+      class="filter"
+      data-category="flowers"
+    >
+      Flowers
+    </button>
+
+
+    <button
+      class="filter"
+      data-category="wine"
+    >
+      Wine
+    </button>
+
+
+    <button
+      class="filter"
+      data-category="cake"
+    >
+      Cake & Biscuits
+    </button>
+
+
+    <button
+      class="filter"
+      data-category="perfume"
+    >
+      Perfume
+    </button>
+
+
+    <button
+      class="filter"
+      data-category="other"
+    >
+      Others
+    </button>
+
+  </div>
+
+
+
+  <!-- SORT -->
+
+  <div class="product-toolbar">
+
+    <p id="resultCount">
+      Showing products
+    </p>
+
+
+    <select id="sortProducts">
+
+      <option value="default">
+        Sort: Featured
+      </option>
+
+      <option value="low">
+        Price: Low to High
+      </option>
+
+      <option value="high">
+        Price: High to Low
+      </option>
+
+      <option value="name">
+        Name: A-Z
+      </option>
+
+    </select>
+
+  </div>
+
+
+
+  <!-- PRODUCTS -->
+
+  <div
+    class="product-grid"
+    id="productGrid"
+  ></div>
+
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section class="service-strip">
+
+  <div>
+
+    <span>🚚</span>
+
+    <b>
+      Fast Delivery
+    </b>
+
+    <small>
+      In Eritrea
+    </small>
+
+  </div>
+
+
+  <div>
+
+    <span>🛡️</span>
+
+    <b>
+      Safe & Secure
+    </b>
+
+    <small>
+      Payment
+    </small>
+
+  </div>
+
+
+  <div>
+
+    <span>♡</span>
+
+    <b>
+      Fresh & Quality
+    </b>
+
+    <small>
+      Products
+    </small>
+
+  </div>
+
+
+  <div>
+
+    <span>🎧</span>
+
+    <b>
+      24/7 Support
+    </b>
+
+    <small>
+      We're here to help
+    </small>
+
+  </div>
+
+</section>
+
+</main>
+
+
+
+<footer class="footer">
+
+  <div class="footer-main">
+
+
+    <a
+      class="brand brand-light"
+      href="index.html"
+    >
+
+      <span class="brand-gift">
+        🎁
+      </span>
+
+      <span>
+
+        <strong>
+          Eliaria
+        </strong>
+
+        <small>
+          Surprise Deliver
+        </small>
+
+      </span>
+
+    </a>
+
+
+    <div class="footer-links">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="products.html">
+        Product
+      </a>
+
+      <a href="about.html">
+        About Us
+      </a>
+
+    </div>
+
+
+    <div class="socials">
+
+      <a href="#">f</a>
+
+      <a href="#">◎</a>
+
+      <a href="#">◉</a>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    © 2026 Eliaria Surprise Deliver.
+    All rights reserved.
+
+  </div>
+
+</footer>
+
+
+
+<!-- CART -->
+
+<div
+  class="cart-drawer"
+  id="cartDrawer"
+>
+
+  <div
+    class="drawer-backdrop"
+    id="cartClose"
+  ></div>
+
+
+  <aside class="drawer">
+
+
+    <div class="drawer-head">
+
+      <h3>
+        Your Cart
+      </h3>
+
+      <button id="cartX">
+        ×
+      </button>
+
+    </div>
+
+
+    <div
+      id="cartItems"
+      class="cart-items"
+    ></div>
+
+
+    <div class="cart-total">
+
+      <span>
+        Total
+      </span>
+
+      <strong id="cartTotal">
+        $0
+      </strong>
+
+    </div>
+
+
+    <button
+      class="btn btn-primary full"
+      id="checkoutBtn"
+    >
+      Continue to Order
+    </button>
+
+
+    <p class="tiny">
+      This demo stores your cart in your browser.
+    </p>
+
+  </aside>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

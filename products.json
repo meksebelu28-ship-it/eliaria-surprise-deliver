@@ -1,0 +1,42 @@
+
+[
+  {
+    "id": "gift-1",
+    "name": "Birthday Surprise Box",
+    "category": "Birthday",
+    "price": 50,
+    "image": "https://placehold.co/600x400?text=Birthday+Gift",
+    "url": "/products/birthday-box",
+    "description": "A special gift box for birthdays",
+    "discountPercent": 15,
+    "discountStart": "2026-10-01",
+    "discountEnd": "2026-10-31",
+    "discountName": "October Gift Sale"
+  },
+  {
+    "id": "gift-2",
+    "name": "Romantic Rose Gift",
+    "category": "Anniversary",
+    "price": 40,
+    "image": "https://placehold.co/600x400?text=Rose+Gift",
+    "url": "/products/rose-gift",
+    "description": "A romantic surprise for someone special",
+    "discountPercent": 0,
+    "discountStart": "",
+    "discountEnd": "",
+    "discountName": ""
+  },
+  {
+    "id": "gift-3",
+    "name": "Christmas Gift Basket",
+    "category": "Christmas",
+    "price": 65,
+    "image": "https://placehold.co/600x400?text=Christmas+Gift",
+    "url": "/products/christmas-basket",
+    "description": "A festive basket for holiday gifting",
+    "discountPercent": 0,
+    "discountStart": "",
+    "discountEnd": "",
+    "discountName": ""
+  }
+]
